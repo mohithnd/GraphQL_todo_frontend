@@ -61,6 +61,7 @@ const Todo: React.FC = () => {
               GraphQL Powered Todo App
             </h1>
           </div>
+
           <form onSubmit={handleAddTodo} className="space-y-4">
             <div>
               <input
@@ -71,6 +72,7 @@ const Todo: React.FC = () => {
                 className="w-full px-4 py-2 rounded-lg bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-colors duration-300"
               />
             </div>
+
             <div>
               <input
                 type="text"
@@ -80,6 +82,7 @@ const Todo: React.FC = () => {
                 className="w-full px-4 py-2 rounded-lg bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-colors duration-300"
               />
             </div>
+
             <div>
               <button
                 type="submit"
@@ -89,6 +92,7 @@ const Todo: React.FC = () => {
               </button>
             </div>
           </form>
+
           <ul className="mt-6 space-y-2">
             {data?.getTodos.length > 0 ? (
               data.getTodos.map((todo: ITodo) => (
@@ -98,9 +102,9 @@ const Todo: React.FC = () => {
                 >
                   <span className="text-gray-800">
                     {todo.title} -{" "}
-                    {todo.tags.map((tag) => (
+                    {todo.tags.map((tag, index) => (
                       <span
-                        key={tag}
+                        key={index}
                         className="inline-block bg-purple-200 text-purple-800 rounded-full px-3 py-1 text-sm font-semibold mr-2"
                       >
                         {tag}
