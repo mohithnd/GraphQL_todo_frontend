@@ -2,12 +2,7 @@ import "./App.css";
 import Todo from "./components/Todo";
 
 function App() {
-  return (
-    <>
-      <div>GraphQL Todo</div>
-      <Todo />
-    </>
-  );
+  return <Todo />;
 }
 
 export default App;
