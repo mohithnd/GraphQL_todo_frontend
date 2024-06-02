@@ -101,7 +101,8 @@ const Todo: React.FC = () => {
                   className="py-3 px-4 bg-gray-100 rounded-lg flex items-center justify-between"
                 >
                   <span className="text-gray-800">
-                    {todo.title} -{" "}
+                    {todo.title}
+                    {todo.tags.length > 0 ? " - " : ""}
                     {todo.tags.map((tag, index) => (
                       <span
                         key={index}
